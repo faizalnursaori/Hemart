@@ -1,76 +1,39 @@
-# Purwadhika Final Project Repository
+Features
 
-This project uses React.js with NextJS for the frontend, Express.js for the backend, and TurboRepo for monorepo management, facilitating rapid development of a scalable web application with streamlined collaboration and efficient server-client interactions.
+Location-Based Store Recommendation
 
-## Available Scripts
+Users are prompted for location access to display products from the nearest store.
+If no nearby store is available, a message with alternative suggestions is provided.
+User Authentication and Profile Management
 
-### `npm run dev`
+Supports email and social login (Google, Facebook, etc.).
+Registration includes email verification and secure password creation.
+Profiles allow updates to personal details, addresses, and profile pictures with validation.
+Reset password functionality via email.
+Product and Order Management
 
-Runs the app in the development mode.
+Displays products and stock availability based on the selected store.
+Users can view order statuses, including pending payment, processed, shipped, and canceled.
+Admins manage orders, including payment verification and order status updates.
+Custom Discounts and Promotions
 
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser. For API, you can access it in [http://localhost:8000/api](http://localhost:8000/api). The app will reload if you make edits.
+Buy-one-get-one and minimum-spend-based voucher discounts.
+Vouchers for specific products or total cart value, with expiration dates.
+Free shipping for loyal customers and referral-based rewards.
+Shipping Address and Cost Calculation
 
-### `npm run build`
+Users can save and manage multiple addresses.
+Dynamic shipping cost calculation using third-party APIs (e.g., RajaOngkir).
+Admin Features
 
-Builds the app for production to the `dist` folder for each project.
+Super Admin: Manage store locations, assign store admins, and oversee inventory and promotions.
+Store Admin: Oversee product stock and manage orders for a specific store location.
+Mobile-First Design
 
-### `npm run serve`
+Ensures responsive layouts for a seamless user experience on mobile devices.
+Tech Stack
 
-Runs the app in the production mode.
-
-### `npm run <task> --workspace=<app-name>`
-
-Run command on specific app (install package, run test, etc).
-
-### `npm run <task> --workspace=<app-name> -- --<option>`
-
-Run command on specific app with options.
-
-Example : `npm run seqeulize --workspace=api -- --db:migrate`
-
-# Rules
-
-## Commit & Pull Request
-
-- Always use [conventional commit message](https://www.conventionalcommits.org/en/v1.0.0/) when committing changes or creating pull request
-- **"Squash and Merge"** your pull request to main branch
-
-## Naming Convention
-
-### REST API
-
-- Always use [REST API naming convention](https://restfulapi.net/resource-naming/)
-
-### File Naming Conventions:
-
-1. **Use CamelCase for filenames:**
-   - Begin filenames with a lowercase letter.
-   - For multiple words, capitalize the first letter of each subsequent word.
-   - Example: `index.js`, `userModel.js`, `dataAccess.js`
-
-2. **Use Descriptive Names:**
-   - Choose names that accurately describe the file's purpose or content.
-   - Avoid overly generic names like `utils.js` unless the file genuinely contains utility functions.
-
-3. **Follow Naming Conventions for Specific File Types:**
-   - For configuration files, use names like `.env`, `config.js`, or `settings.json`.
-   - Use consistent naming for test files, such as appending `.test.js` or `.spec.js` to the filename being tested.
-   - Use `package.json` for the project's metadata and dependencies.
-
-4. **Separate Concerns with File Naming:**
-   - Follow a modular structure for different concerns (e.g., `userController.js`, `userService.js`, `userModel.js` for a user-related module).
-
-### Folder Naming Conventions:
-
-1. **Use Singular or Plural Naming:**
-   - Choose a consistent convention for naming folders (e.g., `models` or `model`, `routes` or `route`).
-
-2. **Avoid Special Characters and Spaces:**
-   - Use hyphens (`-`) or underscores (`_`) for separating words in folder names, but avoid spaces or special characters.
-
-3. **Use Descriptive Names for Folders:**
-   - Name folders according to their content or purpose (e.g., `controllers`, `services`, `utils`, `tests`, `public`, `views`, etc.).
-
-4. **Nested Folder Structure:**
-   - Create a logical and organized folder structure based on the project's architecture.
-   - For larger projects, consider organizing files by features/modules (Feature-Based Structure) or layer-based (Layered Structure).
+Frontend: React.js (or similar frameworks)
+Backend: Node.js with Express.js
+Database: MySQL or PostgreSQL using Prisma ORM
+API Integration: Google Maps for location services, RajaOngkir for shipping costs
